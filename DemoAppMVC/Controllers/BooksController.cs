@@ -20,13 +20,13 @@ namespace DemoAppMVC.Controllers
             var booksRepo = new BooksRespository(dbContext);
             var booksService = new BooksService(booksRepo);
 
-            var bookVM = new BooksViewModel()
-            {
-                Name = "C# The Complete Reference",
-                Price = 25.2,
-                Quantity = 2
-            };
-            await booksService.SaveBookAsync(bookVM);
+            //var bookVM = new BooksViewModel()
+            //{
+            //    Name = "C# The Complete Reference",
+            //    Price = 25.2,
+            //    Quantity = 2
+            //};
+            //await booksService.SaveBookAsync(bookVM);
 
 
             var books = await booksService.GetAllBooksAsync();
